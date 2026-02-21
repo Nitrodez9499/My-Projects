@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mobile-first: base styles for mobile devices */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000000;
+        color: #ffffff;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Dark mode for heading */
+@media (prefers-color-scheme: dark) {
+    h1 {
+        color: #ffffff;
+    }
+}
+
+.input-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.input-section label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.input-section input {
+    padding: 15px 20px;
+    font-size: 18px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 120px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.input-section input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Dark mode for input section */
+@media (prefers-color-scheme: dark) {
+    .input-section input {
+        background-color: #1a1a1a;
+        border-color: #444;
+        color: #ffffff;
+    }
+    
+    .input-section input:focus {
+        border-color: #0d6efd;
+    }
+}
+
+.checkbox-container {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+    justify-items: center;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    transition: background-color 0.2s ease;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.checkbox-item:hover {
+    background-color: #f0f0f0;
+}
+
+.checkbox-item:active {
+    transform: scale(0.98);
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    accent-color: #007bff;
+}
+
+/* Dark mode for checkbox items */
+@media (prefers-color-scheme: dark) {
+    .checkbox-item:hover {
+        background-color: #1a1a1a;
+    }
+    
+    .checkbox-item input[type="checkbox"] {
+        accent-color: #0d6efd;
+    }
+}
+
+.reset-btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 18px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 20px;
+}
+
+.reset-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+.reset-btn:active {
+    transform: translateY(0);
+}
+
+/* Dark mode for reset button */
+@media (prefers-color-scheme: dark) {
+    .reset-btn {
+        background-color: #dc3545;
+    }
+    
+    .reset-btn:hover {
+        background-color: #c82333;
+    }
+}
+
+/* Desktop and larger screens - min-width approach for mobile-first */
+@media (min-width: 768px) {
+    .container {
+        max-width: 1000px;
+        padding: 40px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+        margin-bottom: 50px;
+    }
+    
+    .checkbox-container {
+        gap: 30px;
+        padding: 0 40px;
+    }
+    
+    .checkbox-item {
+        padding: 20px;
+    }
+    
+    .checkbox-item input[type="checkbox"] {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .reset-btn {
+        max-width: 400px;
+        padding: 20px;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .checkbox-container {
+        gap: 40px;
+        padding: 0 60px;
+    }
+    
+    .checkbox-item {
+        padding: 25px;
+    }
+    
+    .checkbox-item input[type="checkbox"] {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .reset-btn {
+        max-width: 500px;
+    }
+}
